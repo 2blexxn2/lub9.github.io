@@ -8,7 +8,7 @@
 }
 
 body {
-  background-image: url(css/bg.jpg);
+  background-image: url(bg.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -17,6 +17,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+	background-size: cover;
 }
 
 .card {
@@ -155,7 +156,7 @@ header nav ul li a.active {
     width: 100%;
     background: transparent;
     backdrop-filter: blur(50px);
-    padding: 30px;
+    padding: 10px;
     transition: 0.3s;
     display: flex;
     flex-direction: column;
@@ -171,13 +172,17 @@ header nav ul li a.active {
 
   header nav ul li a {
     margin: 5px 0;
+		display: flex;
+    flex-direction: column;
+		background-color: #300c0c93;
+		color: beige;
   }
 }
 
 .game {
   background-color: transparent;
   position: fixed;
-  top: 300px;
+  top: 200px;
   box-shadow: 0 0 50px rgb(0, 0, 0);
   backdrop-filter: blur(50px);
   transition: transform 0.5s, box-shadow 0.5s;
@@ -277,12 +282,28 @@ p {
 @media only screen and (max-width: 1200px) {
   .game {
     width: 90%;
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		flex-direction: column;
+		height: 450px;
   }
+	.button{
+		padding: 0px;
+	}
 }
 
 @media only screen and (max-width: 767px) {
   .game {
-    width: 100%;
-    top: 250px;
+    width: 90%;
+    top: 200px;
   }
+
+}
+@media only screen and (max-height: 767px) {
+  .game {
+    width: 90%;
+    top: 200px;
+  }
+
 }
